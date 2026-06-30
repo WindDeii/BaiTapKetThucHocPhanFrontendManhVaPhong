@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Áo Sơ Mi Nữ Trắng Basic",
+    "price": 250000,
+    "image": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?q=80&w=600"
+  },
+  {
+    "id": "2",
+    "name": "Quần Jeans Nam Dáng Suông",
+    "price": 350000,
+    "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=600"
+  },
+  {
+    "id": "3",
+    "name": "Áo Thun Unisex Cotton",
+    "price": 150000,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=600"
+  },
+  {
+    "id": "4",
+    "name": "Váy Cổ Chữ V Họa Tiết",
+    "price": 420000,
+    "image": "https://images.unsplash.com/photo-1515347619362-75fe3fb59b13?q=80&w=600"
+  }
+]

@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #fafafa;
+}
+
+/* Khoảng cách chữ cho Logo */
+.tracking-wide {
+    letter-spacing: 2px;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), 
+                url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    min-height: 500px;
+}
+
+.shadow-text {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content {
+    animation: fadeInDown 1s ease-out;
+}
+
+/* --- Component CSS --- */
+.btn-hover-scale {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+.btn-hover-scale:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Card Sản Phẩm --- */
+.product-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: #fff;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.card-img-top {
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.img-thumbnail-custom {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+#cart-items {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- FOOTER CHUYÊN NGHIỆP --- */
+.custom-footer {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.footer-heading {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.social-links i {
+    font-size: 1.1rem;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.newsletter-form .form-control {
+    border: 1px solid #fff;
+    background: #fff;
+    color: #333;
+    font-size: 0.85rem;
+}
+
+.newsletter-form .form-control:focus {
+    box-shadow: none;
+}
+
+.btn-subscribe {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-subscribe:hover {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+.footer-text-small {
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* --- GIAO DIỆN TRANG ADMIN --- */
+.admin-body { 
+    background-color: #f4f7f6; 
+}
+
+.admin-header-bar {
+    background: linear-gradient(90deg, #1e293b, #0f172a);
+}
+
+.admin-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.admin-table thead th { 
+    background-color: #f8fafc; 
+    color: #64748b; 
+    font-size: 0.85rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.admin-table td { 
+    padding: 1.2rem 0.5rem; 
+    color: #334155;
+    vertical-align: middle;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.admin-table tbody tr {
+    transition: all 0.2s ease;
+}
+.admin-table tbody tr:hover { 
+    background-color: #f0f9ff;
+    transform: scale(1.002);
+}
+
+.search-box {
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+}
+.search-box:focus-within {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+.search-box input:focus { box-shadow: none; }
+
+.btn-add-new {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.btn-add-new:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(37, 99, 235, 0.3);
+}
+
+.id-badge {
+    background-color: #e2e8f0;
+    color: #475569;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.btn-action {
+    border-radius: 8px;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.btn-action:hover { transform: translateY(-2px); }

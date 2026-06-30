@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STYLESHOP - Cửa hàng Thời Trang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 border-bottom sticky-top shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand fw-bold fs-3 tracking-wide text-dark mb-0" href="index.html">STYLESHOP</a>
+            
+            <div class="d-flex align-items-center gap-3">
+                <a href="admin.html" class="btn btn-outline-secondary btn-sm px-3 py-2 fw-medium text-dark border-secondary d-none d-md-block">
+                    Trang Quản Trị
+                </a>
+                <button class="btn btn-dark position-relative px-4 py-2 fw-medium rounded-1 btn-hover-scale" data-bs-toggle="modal" data-bs-target="#cartModal">
+                    <i class="bi bi-cart3 me-1"></i> Giỏ hàng
+                    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-light">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section d-flex align-items-center justify-content-center text-center text-white">
+        <div class="container hero-content">
+            <h1 class="display-3 fw-bold mb-3 shadow-text">Bộ Sưu Tập Mới 2026</h1>
+            <p class="lead mb-4 shadow-text">Khám phá phong cách thời trang dẫn đầu xu hướng cùng StyleShop.</p>
+            <a href="#product-section" class="btn btn-light text-dark px-5 py-3 rounded-pill fw-bold fs-5 btn-hover-scale">
+                Mua Sắm Ngay
+            </a>
+        </div>
+    </section>
+
+    <main id="product-section" class="container my-5 py-4">
+        <h2 class="text-center fw-bold mb-5 text-uppercase">Sản Phẩm Nổi Bật</h2>
+        
+        <div class="row mb-5 justify-content-center">
+            <div class="col-md-5 mb-2">
+                <div class="input-group shadow-sm">
+                    <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+                    <input type="text" id="searchInput" class="form-control border-start-0 ps-0" placeholder="Tìm kiếm sản phẩm...">
+                </div>
+            </div>
+            <div class="col-md-3 mb-2">
+                <select id="categoryFilter" class="form-select shadow-sm">
+                    <option value="all">Tất cả danh mục</option>
+                    <option value="áo">Áo</option>
+                    <option value="quần">Quần</option>
+                    <option value="váy">Váy</option>
+                    <option value="giày">Giày</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="loader" class="text-center my-5">
+            <div class="spinner-border text-dark" role="status"></div>
+            <p class="mt-2 text-muted fw-medium">Đang tải dữ liệu sản phẩm...</p>
+        </div>
+
+        <div class="row g-4" id="product-container"></div>
+    </main>
+
+    <footer class="custom-footer mt-5 pt-5 pb-3">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="footer-heading">STYLESHOP DESIGN</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Hệ thống cửa hàng</a></li>
+                        <li><a href="#">Thông tin tuyển dụng</a></li>
+                        <li><a href="#">Liên hệ hợp tác kinh doanh</a></li>
+                    </ul>
+                    <img src="https://webmedia.com.vn/images/2021/09/logo-da-thong-bao-bo-cong-thuong-mau-xanh.png" alt="Bộ Công Thương" style="max-width: 150px; margin-top: 10px;">
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="footer-heading">LIÊN KẾT VỚI CHÚNG TÔI</h6>
+                    <ul class="footer-links social-links">
+                        <li><a href="#"><i class="bi bi-facebook text-primary"></i> Facebook</a></li>
+                        <li><a href="#"><i class="bi bi-instagram text-danger"></i> Instagram</a></li>
+                        <li><a href="#"><i class="bi bi-youtube text-danger"></i> Youtube</a></li>
+                        <li><a href="#"><i class="bi bi-envelope-fill text-secondary"></i> admin@styleshop.vn</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="footer-heading">CHĂM SÓC KHÁCH HÀNG</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Chính sách vận chuyển</a></li>
+                        <li><a href="#">Chính sách tích điểm</a></li>
+                        <li><a href="#">Chính sách đổi trả hàng</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Chế độ bảo hành trọn đời</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="footer-heading">ĐĂNG KÝ NHẬN ƯU ĐÃI</h6>
+                    <form class="d-flex mb-3 newsletter-form">
+                        <input type="email" class="form-control rounded-0" placeholder="Nhập email của bạn" required>
+                        <button type="button" class="btn rounded-0 btn-subscribe">GỬI NGAY</button>
+                    </form>
+                    <p class="footer-text-small text-white" style="opacity: 0.8;">
+                        Bằng cách nhấp vào nút ĐĂNG KÝ, bạn đồng ý với Chính sách bảo mật và cookie của chúng tôi.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom pt-4 border-top border-secondary text-center">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-3">
+                    <p class="mb-0 text-white">&copy; 2026 STYLESHOP All Rights Reserved</p>
+                    <div class="payment-methods mt-3 mt-md-0 d-flex align-items-center gap-2">
+                        <span class="text-white">Chúng tôi nhận thanh toán qua:</span>
+                        <div class="payment-methods mt-3 mt-md-0 d-flex align-items-center gap-2">
+    <span class="text-white">Chúng tôi nhận thanh toán qua:</span>
+    <img src="anh/vnpay.jpg.jpg" alt="VNPay" style="height: 28px; width: auto; background: white; padding: 3px; border-radius: 4px; object-fit: contain;">
+    
+<img src="anh/momo.jpg.jpg" alt="MoMo" style="height: 28px; width: auto; background: white; padding: 3px; border-radius: 4px; object-fit: contain;">
+    
+    <img src="anh/momo.jpg.jpg" alt="Visa" style="height: 28px; background: white; padding: 3px; border-radius: 4px;">
+</div>
+                </div>
+                
+                <h6 class="fw-bold text-white mb-2">CÔNG TY CỔ PHẦN THƯƠNG MẠI STYLESHOP VIỆT NAM</h6>
+                <p class="text-white mb-1" style="font-size: 0.85rem;">Trụ sở chính: Tầng 1, Tòa nhà ABC, Phường XYZ, Quận Nam Từ Liêm, Hà Nội</p>
+                <p class="text-white mb-0" style="font-size: 0.85rem;">Giấy chứng nhận Đăng ký Kinh doanh số 0123456789 do Sở Kế hoạch và Đầu tư Thành phố Hà Nội cấp lần đầu ngày 10/01/2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-light border-bottom-0">
+                    <h5 class="modal-title fw-bold">Giỏ Hàng Của Bạn</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div id="cart-items" class="p-3"></div>
+                </div>
+                <div class="modal-footer justify-content-between bg-light border-top-0">
+                    <h5 class="fw-bold mb-0">Tổng cộng: <span id="cart-total" class="text-danger">0</span> đ</h5>
+                    <button type="button" class="btn btn-dark px-4 py-2 fw-medium rounded-1">Tiến Hành Thanh Toán</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body fw-medium">Thêm vào giỏ hàng thành công!</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
